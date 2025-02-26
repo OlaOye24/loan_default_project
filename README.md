@@ -1,4 +1,4 @@
-Loan default assignment submission for Olaoluwapo Oyefolu
+Loan default assignment submission for Ola Oyefolu
 
 Content Description:
 1)src:
