@@ -1,0 +1,21 @@
+# Flask API
+flask==3.0.3
+joblib==1.5.2
+scikit-learn==1.7.2
+category_encoders>=2.6.0
+pandas==2.3.3
+numpy==2.4.4
+
+# Notebook — data analysis & visualisation
+matplotlib==3.10.0
+seaborn==0.13.2
+missingno==0.5.2
+sweetviz==2.3.3
+
+# Notebook — modelling
+imbalanced-learn==0.14.2
+xgboost==3.3.0
+yellowbrick==1.5
+
+# Notebook — utilities
+requests
