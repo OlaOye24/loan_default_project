@@ -24,9 +24,10 @@ loaded_features_before_selection = joblib.load("../artifacts/features_before_sel
 loaded_selected_features = joblib.load("../artifacts/selected_features_list.joblib")
 loaded_numerical_means = joblib.load("../artifacts/numerical_means.joblib")
 loaded_categorical_means = joblib.load("../artifacts/categorical_means.joblib")
+loaded_training_reference_date = joblib.load("../artifacts/training_reference_date.joblib")
 
 
-def calculate_age(df, date_column, new_column_name):
+def calculate_age(df, date_column, new_column_name, reference_date):
     ages_in_months = []
     for i in range(len(df)):
         date_value = df[date_column].iloc[i]
@@ -35,9 +36,8 @@ def calculate_age(df, date_column, new_column_name):
         if isinstance(date_value, datetime):     # extract date from datetime
             date_value = date_value.date()
         if pd.notna(date_value):
-            current_date = datetime.now().date()
-            delta_years = current_date.year - date_value.year
-            delta_months = current_date.month - date_value.month
+            delta_years  = reference_date.year  - date_value.year
+            delta_months = reference_date.month - date_value.month
             age_in_months = delta_years * 12 + delta_months
             ages_in_months.append(age_in_months)
         else:
@@ -73,8 +73,8 @@ def predict():
         df['previousApplication'] = df['data.Request.Input.PrevApplication.LoanAmount'].apply(lambda x: 0 if pd.isna(x) else 1)
         df['salaryService'] = df['data.Request.Input.SalaryService.MinimumBalance'].apply(lambda x: 0 if pd.isna(x) else 1)
 
-        df = calculate_age(df, 'CreationDate', 'loanAge')
-        df = calculate_age(df, 'data.Request.Input.Customer.DateOfBirth', 'data.Request.Input.Customer.Age')
+        df = calculate_age(df, 'CreationDate', 'loanAge', loaded_training_reference_date)
+        df = calculate_age(df, 'data.Request.Input.Customer.DateOfBirth', 'data.Request.Input.Customer.Age', loaded_training_reference_date)
 
         df['data.Request.Input.BVN.StateOfOrigin'] = df['data.Request.Input.BVN.StateOfOrigin'].str.lower()
 

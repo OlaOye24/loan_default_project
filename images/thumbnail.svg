@@ -1,0 +1,189 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0f172a"/>
+      <stop offset="100%" style="stop-color:#1e293b"/>
+    </linearGradient>
+    <linearGradient id="barGradDefault" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#f43f5e"/>
+      <stop offset="100%" style="stop-color:#be123c"/>
+    </linearGradient>
+    <linearGradient id="barGradSafe" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" style="stop-color:#34d399"/>
+      <stop offset="100%" style="stop-color:#059669"/>
+    </linearGradient>
+    <linearGradient id="cardGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#1e293b"/>
+      <stop offset="100%" style="stop-color:#0f172a"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <filter id="softglow">
+      <feGaussianBlur stdDeviation="8" result="coloredBlur"/>
+      <feMerge>
+        <feMergeNode in="coloredBlur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+    <clipPath id="chartClip">
+      <rect x="660" y="100" width="480" height="430" rx="12"/>
+    </clipPath>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)"/>
+
+  <!-- Subtle grid lines -->
+  <g stroke="#1e293b" stroke-width="1" opacity="0.6">
+    <line x1="0" y1="105" x2="1200" y2="105"/>
+    <line x1="0" y1="210" x2="1200" y2="210"/>
+    <line x1="0" y1="315" x2="1200" y2="315"/>
+    <line x1="0" y1="420" x2="1200" y2="420"/>
+    <line x1="0" y1="525" x2="1200" y2="525"/>
+    <line x1="240" y1="0" x2="240" y2="630"/>
+    <line x1="480" y1="0" x2="480" y2="630"/>
+    <line x1="720" y1="0" x2="720" y2="630"/>
+    <line x1="960" y1="0" x2="960" y2="630"/>
+  </g>
+
+  <!-- Accent line left -->
+  <rect x="0" y="0" width="5" height="630" fill="#3b82f6"/>
+
+  <!-- ── LEFT PANEL: Text ── -->
+
+  <!-- Tag -->
+  <rect x="60" y="80" width="210" height="32" rx="16" fill="#1e40af" opacity="0.7"/>
+  <text x="165" y="101" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#93c5fd" text-anchor="middle" letter-spacing="2">MACHINE LEARNING</text>
+
+  <!-- Title -->
+  <text x="60" y="175" font-family="'Segoe UI', system-ui, sans-serif" font-size="58" font-weight="700" fill="#f1f5f9" letter-spacing="-1">Loan Default</text>
+  <text x="60" y="245" font-family="'Segoe UI', system-ui, sans-serif" font-size="58" font-weight="700" fill="#3b82f6" filter="url(#softglow)" letter-spacing="-1">Prediction</text>
+
+  <!-- Divider -->
+  <rect x="60" y="270" width="80" height="3" rx="2" fill="#3b82f6"/>
+
+  <!-- Description -->
+  <text x="60" y="315" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#94a3b8">FPD-15 binary classification using</text>
+  <text x="60" y="342" font-family="'Segoe UI', system-ui, sans-serif" font-size="18" fill="#94a3b8">credit bureau &amp; application data</text>
+
+  <!-- Stats row -->
+  <!-- Stat 1 -->
+  <rect x="60" y="390" width="150" height="80" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="135" y="420" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="#34d399" text-anchor="middle">9</text>
+  <text x="135" y="440" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">SELECTED FEATURES</text>
+  <text x="135" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">via RFECV</text>
+
+  <!-- Stat 2 -->
+  <rect x="226" y="390" width="150" height="80" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="301" y="420" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="#3b82f6" text-anchor="middle">3 600</text>
+  <text x="301" y="440" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">TRAINING</text>
+  <text x="301" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">RECORDS</text>
+
+  <!-- Stat 3 -->
+  <rect x="392" y="390" width="150" height="80" rx="10" fill="#0f172a" stroke="#334155" stroke-width="1"/>
+  <text x="467" y="420" font-family="'Segoe UI', system-ui, sans-serif" font-size="26" font-weight="700" fill="#f59e0b" text-anchor="middle">RF</text>
+  <text x="467" y="440" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">RANDOM FOREST</text>
+  <text x="467" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">+ GRID SEARCH</text>
+
+  <!-- Tech stack pills -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="12">
+    <rect x="60" y="505" width="90" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="105" y="521" fill="#94a3b8" text-anchor="middle">scikit-learn</text>
+
+    <rect x="162" y="505" width="68" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="196" y="521" fill="#94a3b8" text-anchor="middle">XGBoost</text>
+
+    <rect x="242" y="505" width="52" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="268" y="521" fill="#94a3b8" text-anchor="middle">Flask</text>
+
+    <rect x="306" y="505" width="66" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="339" y="521" fill="#94a3b8" text-anchor="middle">pandas</text>
+
+    <rect x="384" y="505" width="86" height="24" rx="12" fill="#1e293b" stroke="#334155" stroke-width="1"/>
+    <text x="427" y="521" fill="#94a3b8" text-anchor="middle">imbalanced-learn</text>
+  </g>
+
+  <!-- ── RIGHT PANEL: Chart card ── -->
+  <rect x="660" y="100" width="480" height="430" rx="12" fill="url(#cardGrad)" stroke="#334155" stroke-width="1"/>
+
+  <!-- Card header -->
+  <rect x="660" y="100" width="480" height="48" rx="0" fill="#1e293b"/>
+  <rect x="660" y="100" width="480" height="48" rx="12" fill="#1e293b"/>
+  <rect x="660" y="124" width="480" height="24" fill="#1e293b"/>
+  <text x="700" y="131" font-family="'Segoe UI', system-ui, sans-serif" font-size="13" fill="#94a3b8">Model comparison — K-Fold CV accuracy</text>
+  <!-- traffic lights -->
+  <circle cx="1096" cy="124" r="6" fill="#f43f5e" opacity="0.7"/>
+  <circle cx="1114" cy="124" r="6" fill="#f59e0b" opacity="0.7"/>
+  <circle cx="1132" cy="124" r="6" fill="#34d399" opacity="0.7"/>
+
+  <!-- Y axis labels -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#475569">
+    <text x="686" y="186">100%</text>
+    <text x="689" y="234">80%</text>
+    <text x="689" y="282">60%</text>
+    <text x="689" y="330">40%</text>
+    <text x="689" y="378">20%</text>
+  </g>
+
+  <!-- Horizontal grid lines inside chart -->
+  <g stroke="#1e3a5f" stroke-width="1" stroke-dasharray="4,4" opacity="0.5">
+    <line x1="718" y1="180" x2="1120" y2="180"/>
+    <line x1="718" y1="228" x2="1120" y2="228"/>
+    <line x1="718" y1="276" x2="1120" y2="276"/>
+    <line x1="718" y1="324" x2="1120" y2="324"/>
+    <line x1="718" y1="372" x2="1120" y2="372"/>
+  </g>
+
+  <!-- Bar chart: 4 algorithms -->
+  <!-- Baseline = 372 (0%), top of chart = 180 (100%)  range = 192px -->
+  <!-- Random Forest: 89% → height = 0.89*192 = 171 → y = 372-171 = 201 -->
+  <rect x="730" y="201" width="62" height="171" rx="4" fill="url(#barGradSafe)" filter="url(#glow)"/>
+  <!-- XGBoost: 85% → height = 163 → y = 209 -->
+  <rect x="820" y="209" width="62" height="163" rx="4" fill="#3b82f6" opacity="0.85"/>
+  <!-- Logistic Reg: 74% → height = 142 → y = 230 -->
+  <rect x="910" y="230" width="62" height="142" rx="4" fill="#8b5cf6" opacity="0.85"/>
+  <!-- Decision Tree: 79% → height = 152 → y = 220 -->
+  <rect x="1000" y="220" width="62" height="152" rx="4" fill="#f59e0b" opacity="0.85"/>
+
+  <!-- Value labels on bars -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="13" font-weight="600" text-anchor="middle">
+    <text x="761" y="195" fill="#34d399">89%</text>
+    <text x="851" y="203" fill="#93c5fd">85%</text>
+    <text x="941" y="224" fill="#c4b5fd">74%</text>
+    <text x="1031" y="214" fill="#fcd34d">79%</text>
+  </g>
+
+  <!-- X axis line -->
+  <line x1="718" y1="372" x2="1120" y2="372" stroke="#334155" stroke-width="1.5"/>
+
+  <!-- X axis labels -->
+  <g font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">
+    <text x="761" y="392">Random</text>
+    <text x="761" y="406">Forest</text>
+    <text x="851" y="392">XGBoost</text>
+    <text x="941" y="392">Logistic</text>
+    <text x="941" y="406">Reg.</text>
+    <text x="1031" y="392">Decision</text>
+    <text x="1031" y="406">Tree</text>
+  </g>
+
+  <!-- ROC AUC badge -->
+  <rect x="680" y="435" width="200" height="74" rx="8" fill="#0f172a" stroke="#1d4ed8" stroke-width="1"/>
+  <text x="780" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">ROC AUC (best model)</text>
+  <text x="780" y="490" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#3b82f6" text-anchor="middle" filter="url(#glow)">0.91</text>
+
+  <!-- Pipeline badge -->
+  <rect x="900" y="435" width="200" height="74" rx="8" fill="#0f172a" stroke="#065f46" stroke-width="1"/>
+  <text x="1000" y="458" font-family="'Segoe UI', system-ui, sans-serif" font-size="11" fill="#64748b" text-anchor="middle">Oversampling ratio</text>
+  <text x="1000" y="490" font-family="'Segoe UI', system-ui, sans-serif" font-size="30" font-weight="700" fill="#34d399" text-anchor="middle" filter="url(#glow)">1 : 1</text>
+
+  <!-- Bottom bar -->
+  <rect x="0" y="600" width="1200" height="30" fill="#0f172a" opacity="0.8"/>
+  <text x="60" y="620" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#334155">FSL Digital · Credit Risk Analytics</text>
+  <text x="1140" y="620" font-family="'Segoe UI', system-ui, sans-serif" font-size="12" fill="#334155" text-anchor="end">Python · Flask · scikit-learn</text>
+</svg>
