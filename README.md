@@ -1,6 +1,8 @@
 # Loan Default Prediction
 
-A machine learning system that predicts whether a borrower will default on their first loan payment (FPD-15). It includes a full modelling pipeline in a Jupyter notebook and a Flask REST API for serving predictions.
+A machine learning system that predicts whether a borrower will default on their first loan payment (FPD-15). It includes a full modelling pipeline in a Jupyter notebook and a Flask REST API for serving predictions. 
+
+**Note**: The data used for this project is real anonymised historical data **that was provided publicly** by a leading African digital lender for the purpose of scoping out possibilities in loan default prediction.
 
 ---
 
